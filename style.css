@@ -109,3 +109,65 @@ button {
     font-size: 32px;
     font-weight: 400;
 }
+/* Ocultar imagen en pantallas pequeñas */
+.container__imagen-persona {
+    width: 100%;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    .container__imagen-persona {
+        display: none; /* Ocultar imagen en dispositivos móviles */
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .container__informaciones {
+        margin-bottom: 15%;
+    
+    }
+
+    .container__input {
+        height: 48px;
+        font-size: 20px;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .container__boton {
+        font-size: 18px;
+    }
+
+    .texto__parrafo {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+   
+
+    .container__botones {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    .texto__parrafo {
+        font-size: 28px;
+    }
+}
